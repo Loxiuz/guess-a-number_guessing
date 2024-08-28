@@ -1,0 +1,13 @@
+body {
+    background-color: gray;
+}
+
+#btns {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 5em;
+}
+
+.hidden {
+    visibility: hidden;
+}
