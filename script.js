@@ -9,18 +9,23 @@ function start(){
     updateBtns();
 }
 
-function guess(){
-    document.getElementById("guess").textContent = `${Math.floor(Math.random() * 100) + 1}`;
+function showGuess(guess){
+    document.getElementById("guess").textContent = guess;   
+}
+
+function newGuess(){
     guessCounter++; 
     updateBtns();
+    const guess = `${Math.floor(Math.random() * 100) + 1}`;
+    showGuess(guess);
 }
 
 function guessTooHigh(){
-    guess();
+   newGuess()
 }
 
 function guessTooLow(){
-    guess();
+    newGuess()
 }
 
 function guessCorrect(){
@@ -40,6 +45,6 @@ function updateBtns(){
         document.getElementById("tooHighBtn").addEventListener("click", guessTooHigh);
         document.getElementById("tooLowBtn").addEventListener("click", guessTooLow);
     } else {
-        document.getElementById("startBtn").addEventListener("click", guess);
+        document.getElementById("startBtn").addEventListener("click", newGuess);
     }
 }
