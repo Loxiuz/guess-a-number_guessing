@@ -2,7 +2,7 @@ body {
     background-color: gray;
 }
 
-#btns {
+#btns-container {
     display: grid;
     grid-template-columns: 1fr;
     width: 5em;
